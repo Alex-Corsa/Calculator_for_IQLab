@@ -1,0 +1,410 @@
+.section-order {
+    // controller
+    &__hero2 {
+        text-align: center;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 29.48px;
+    }
+    &__controller {
+        display: flex;
+        gap: 23px;
+    }
+    &__btn-person {
+        width: 182px;
+        height: 48px;
+        font-size: 24px;
+    }
+    &__btn-add {
+        width: 79px;
+        height: 48px;
+    }
+
+    // cards
+
+    &__cards {
+        position: relative;
+        border-radius: 12px;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    &__background {
+        position: absolute;
+        z-index: -1;
+    }
+    &__Group--top {
+        right: 0;
+    }
+    &__Group--bottom {
+        right: 0;
+        bottom: 10%;
+    }
+    &__Group--left {
+        bottom: 20%;
+    }
+    &__full-info {
+        padding: 0 101px;
+        margin: 0 auto;
+    }
+    &__hero2 {
+        margin-top: 60px;
+        padding-top: 48px;
+        text-align: center;
+        font-size: 26px;
+    }
+    &__form {
+        display: grid;
+        grid-template-areas: 
+            "top top"
+            "left right";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-gap: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.5px;
+    }
+    &__full-name {
+        margin: 12px 0;
+        grid-area: top;
+    }
+    &__date {
+        grid-area: left;
+    }
+    &__tel {
+        grid-area: right;
+    }
+    &__label {
+        margin-top: 12px;
+    }
+    &__input {        
+        margin-top: 12px;
+        width: 100%;
+        height: 48px;
+        border: 1px solid black;
+        border-radius: 12px;
+        padding-left: 12px;
+    }
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        gap: 44px;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 29.48px;
+    }
+    &__block-analyzes {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 36px;
+        margin-top: 48px;
+    }
+    &__form-analyz {
+        display: flex;
+        flex-direction: column;
+    }
+    &__analises {
+        width: 671px;
+        display: flex;
+    }
+    &__analyz {
+        height: 48px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: 44px;
+    }
+    &__numder-analyz {
+        font-size: 13px;
+        padding-right: 4px;
+        align-content: center;
+        font-weight: 400;
+        opacity: 0.6;
+    }
+    &__input1 {
+        flex: 1 1 auto;
+        // border: 1px solid black;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        padding-left: 12px;
+    }
+    &__btn-cost {
+        height: 48px;
+        border: 1px solid black;
+        border-radius: 12px;
+        text-align: center;
+    }
+    &__input1, &__elem1 {
+        flex: 1 1 auto;
+    }
+    &__button--remove {
+        background-color: $background-white;
+        border-radius: 0;
+        border: none;
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    &__img--remove {
+        padding: 0 12px;
+    }
+    &__btn-cost, &__elem2 {
+        width: 146px;
+    }
+    &__discount {
+        display: flex;
+        align-items: flex-end;
+    }
+    &__input3, &__elem3 {
+        width: 118px;
+    }
+    &__input3 {
+        height: 48px;
+        border: 1px solid black;
+        border-radius: 12px 0 0 12px;
+        text-align: center;
+    }
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: $primary-color;
+        height: 48px;
+        width: 93px;
+        border: none;
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        border-radius: 0 12px 12px 0;
+        cursor: pointer;
+    }
+    &__block:hover {
+        background: linear-gradient(180deg, #FFFFFF 0%, #EAC2C2 100%);
+    }
+    &__btn {
+        border: none;
+        background: transparent;
+    }
+    &__btn:hover {
+        background: transparent;
+    }
+    &__discount, &__elem3 {
+        width: 211px;
+    }
+    &__add-analyz {
+        margin: 36px auto 0;
+        width: 382px;
+        height: 56px;
+        font-size: 24px;
+        line-height: 29.26px;
+    }
+    &__type-of-biomaterial {
+        margin-top: 48px;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 29.48px;
+    }
+    &__form-checkbox {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+        gap: 24px;
+        font-size: 20px;
+        line-height: 24.38px;
+        align-items: center;
+    }
+    &__info-block {
+        margin-top: 48px;
+        padding: 0 16px 48px;
+        display: flex;
+        gap: 40px;
+        justify-content: space-between;
+    }
+    &__info-box {
+        flex: 1 1 auto;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 36.57px;
+        background-color: #FEF8F8;
+        border-radius: 12px;
+        height: 142px;
+        text-align: center;
+        border: 1px solid black;
+    }
+    &__cost-for-analyses, &__cost-per-call, &__price-for-biomaterial {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 48.76px;
+    }
+    &__text-name {
+        padding: 24px 13px;
+    }
+    &__text-name span {
+        color: $primary-color;
+    }
+    &__btn-cost:hover, &__btn:hover {
+        background-color: $background-blue-white;
+    }
+}
+
+// comment Карусель 
+
+.carousel__item {
+    display: none;
+}
+.carousel__item.active {
+    display: block;
+}
+
+.autocomplete-list {
+    width: 659px;
+    position: absolute;
+    top: 48px;
+    left: 11px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.autocomplete-item {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.autocomplete-item:hover {
+    background-color: #f0f0f0;
+}
+
+// comment checkbox
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+// Ховаємо справжній чекбокс
+.custom-checkbox {
+    display: none;
+    // opacity: 0;
+    // position: absolute;
+    // cursor: pointer;
+    // height: 0;
+    // width: 0;
+}
+
+// Стилізований чекбокс
+.checkbox-wrapper .custom-checkbox-label {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #fff;
+    position: relative;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-right: 12px;
+}
+
+.custom-checkbox-label:hover {
+    background: linear-gradient(180deg, #FFFFFF 0%, #EAC2C2 100%);
+}
+
+// Іконка "галочка"
+.checkbox-wrapper .custom-checkbox-label::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 6px;
+    height: 12px;
+    border: 1px solid black;
+    border-width: 0 2px 2px 0;
+    opacity: 0;
+    transform: rotate(45deg);
+    transition: opacity 0.3s ease;
+}
+
+.custom-checkbox:checked ~ .custom-checkbox-label::after {
+    opacity: 1;
+}
+
+.checkbox-wrapper:hover input ~ .custom-checkbox-label {
+    background: linear-gradient(180deg, #FFFFFF 0%, #EAC2C2 100%);
+    border: 1px solid #BD0000;
+}
+
+.custom-checkbox-label-2:hover {
+    color: #BD0000;
+}
+
+// comment Модальне вікно
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+.modal h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+.modal p {
+    font-size: 17px;
+}
+.modal__phone, .modal__card {
+    margin-bottom: 30px;
+}
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    max-height: 80%;
+    overflow-y: auto;
+}
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.modal__total-cost {
+    font-size: 20px;
+    font-weight: 600;
+}
+.modal-close:hover {
+    background: none;
+}
+.none {
+    display: none;
+}

@@ -1,0 +1,34 @@
+.section-info {
+    &__info-box {
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+    &__hero3 {
+        text-align: end;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 36.57px;
+    }
+    &__currency {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 48.76px;
+        background-color: $primary-color;
+        color: #FEF8F8;
+        padding: 20.5px 34.5px;
+        border-radius: 12px;
+    }
+    &__download {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        padding: 19px 48px;
+        gap: 8px;
+    }
+    &__download-img {
+        font-family: Montserrat;
+    }
+}
+

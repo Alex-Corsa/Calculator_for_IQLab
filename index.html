@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQLab</title>
+    <link rel="stylesheet" href="assets/reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>  <!-- For import data -->
+    <script defer src="assets/js/analyses.js"></script>
+    <script defer src="assets/js/debugging.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="page__background page__Ellipse--left-upper">
+        <img src="assets/img/Ellipse_left-upper.png" alt="left-upper">
+    </div>
+    <div class="page__background page__Ellipse--right_upper">
+        <img src="assets/img/Ellipse_right_upper.png" alt="right_upper">
+    </div>
+
+    <div class="page">
+
+        <header id="header">
+            <div class="header container">
+                <div class="header__logo">
+                    <a class="header__logo-anchor"  href="#">
+                        <img src="assets/img/Logo.svg" alt="logo" class="header__logo-img">
+                    </a>
+                </div>
+                <h1 class="header__title">Запис виклику додому</h1>
+                <div class="header__admin">
+                    <a class="header__admin-anchor" href="assets/admin/admin.html" title="Перейти до адміністратора">
+                        <img src="assets/img/Car.svg" alt="admin" class="header__admin-img">
+                    </a>                    
+                </div>
+            </div>
+        </header>
+
+        <main id="main">
+
+            <section class="section-geography container">
+                <div class="section-geography__address">
+                    <h2 class="section-geography__hero2">Адреса виклику</h2>
+                    <span class="section-geography__span-cities">Місто</span>
+                    <div class="section-geography__name-cities"  id="city-container">
+                        <ul class="section-geography__ul" id="city-list">
+                            <li id="Dnipro" class="section-geography__li active">Дніпро</li>
+                            <li id="Kamianske" class="section-geography__li">Кам'янське</li>
+                            <li id="KryvyiRih" class="section-geography__li">Кривий Ріг</li>
+                            <li id="Pokrov" class="section-geography__li">Покров</li>                            
+                        </ul>
+                        <img class="section-geography__img-icons" src="assets/img/Icons.png" alt="Icons">
+                    </div>
+                    <form class="section-geography__form" action="">
+                        <label class="section-geography__label" for="street">Вулиця</label>
+                        <input class="section-geography__input" type="text" name="" id="street">
+                        <div class="section-geography__detaly">
+                            <div class="section-geography__block">
+                                <label class="section-geography__label" for="house">Будинок</label>
+                                <input class="section-geography__litl-input" type="text" name="" id="house">
+                            </div>
+                            <div class="section-geography__block">
+                                <label class="section-geography__label" for="entrance">Під’їзд</label>
+                                <input class="section-geography__litl-input" type="text" name="" id="entrance">
+                            </div>
+                            <div class="section-geography__block">
+                                <label class="section-geography__label" for="apartment">Квартира</label>
+                                <input class="section-geography__litl-input" type="text" name="" id="apartment">
+                            </div>
+                            <div class="section-geography__block">
+                                <label class="section-geography__label" for="intercom">Домофон</label>
+                                <input class="section-geography__litl-input" type="text" name="" id="intercom">
+                            </div>
+                            <div class="section-geography__block">
+                                <label class="section-geography__label" for="floor">Поверх</label>
+                                <input class="section-geography__litl-input" type="text" name="" id="floor">
+                            </div>
+                        </div>
+                        <label for="comment">Коментар</label>
+                        <textarea class="section-geography__textarea" name="comment" id="comment" cols="30" rows="10"></textarea>
+                    </form>
+                </div>
+                <div class="section-geography__address-details">
+                    <div class="section-geography__cost">
+                        <div class="section-geography__cost-box-1 ">
+                            <p class="section-geography__p1">У межах міста</p>
+                            <p class="section-geography__p2">на наступний день</p>
+                            <button class="section-geography__btn active">300 грн</button>
+                        </div>
+                        <div class="section-geography__cost-box-2">
+                            <p class="section-geography__p1">Віддалені райони</p>
+                            <p class="section-geography__p2">на наступний день</p>
+                            <button class="section-geography__btn">400 грн</button>
+                        </div>
+                        <div class="section-geography__cost-box-3">
+                            <p class="section-geography__p1">За містом</p>
+                            <p class="section-geography__p2">у той самий день</p>
+                            <button class="section-geography__btn blocked" disabled>500 грн</button>
+                        </div>
+                    </div>
+                    <div class="section-geography__map active" id="map_Dnipro" >
+                        <iframe class="section-geography__iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d85043.21190319122!2d34.99576341213307!3d48.47459212039881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1suk!2sua!4v1727710798856!5m2!1suk!2sua"
+                        allowfullscreen 
+                        loading="lazy"
+                        referrerpolicy="no-referrer" 
+                        title="Карта з Google Maps, яка показує регіон біля Дніпра, Україна."></iframe>
+                    </div>
+                    <div class="section-geography__map" id="map_Kamianske" >
+                        <iframe class="section-geography__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d136707.721321158!2d34.445858105912706!3d48.53907317305516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbda360ea4dfed%3A0xd0e3b9284b2885f8!2z0JrQsNC84oCZ0Y_QvdGB0YzQutC1LCDQlNC90ZbQv9GA0L7Qv9C10YLRgNC-0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNTE5MDA!5e1!3m2!1suk!2sua!4v1729444383912!5m2!1suk!2sua"
+                        allowfullscreen 
+                        loading="lazy"
+                        referrerpolicy="no-referrer" 
+                        title="Карта з Google Maps, яка показує регіон біля Кам'янського, Україна."></iframe>
+                    </div>
+                    <div class="section-geography__map" id="map_KryvyiRih">
+                        <iframe class="section-geography__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d553631.8305389297!2d32.70709327363369!3d47.90639480184039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dadfe03154ab7b%3A0xb0fa3a177d6b186e!2z0JrRgNC40LLQuNC5INCg0ZbQsywg0JTQvdGW0L_RgNC-0L_QtdGC0YDQvtCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDUwMDAw!5e1!3m2!1suk!2sua!4v1729444997290!5m2!1suk!2sua"
+                        allowfullscreen 
+                        loading="lazy"
+                        referrerpolicy="no-referrer" 
+                        title="Карта з Google Maps, яка показує регіон біля Кривого Рогу, Україна."></iframe>
+                    </div>
+                    <div class="section-geography__map" id="map_Pokrov" >
+                        <iframe class="section-geography__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d69541.46184225573!2d34.00303813848168!3d47.653479138920325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40db5b77958357e3%3A0xf0214ddbf6cf33f0!2z0J_QvtC60YDQvtCyLCDQlNC90ZbQv9GA0L7Qv9C10YLRgNC-0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNTMzMDA!5e1!3m2!1suk!2sua!4v1729445040108!5m2!1suk!2sua"
+                        allowfullscreen 
+                        loading="lazy"
+                        referrerpolicy="no-referrer" 
+                        title="Карта з Google Maps, яка показує регіон біля Покрова, Україна."></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-order container">
+
+                <div class="section-order__controller carousel__controls">
+                    <button id="btn-person-1" class="section-order__btn-person active">Клієнт 1</button>
+                    <button id="btn-person-2" class="section-order__btn-person">Клієнт 2</button>
+                    <button class="section-order__btn-add"><img src="assets/img/Icon=person_add.png" alt="person"></button>
+                </div>
+
+                <div class="section-order__cards">
+
+                    <div class="section-order__background section-order__Group--top">
+                        <img src="assets/img/Group_top.png" alt="">
+                    </div>
+                    <div class="section-order__background section-order__Group--bottom">
+                        <img src="assets/img/Group_bottom.png" alt="">
+                    </div>
+                    <div class="section-order__background section-order__Group--left">
+                        <img src="assets/img/Group_left.png" alt="">
+                    </div>
+
+                    <!--  -->
+
+                    <div class="carousel">
+
+                        <!-- Клієнт 1 -->
+
+                        <div class="carousel__item section-order__personal-data-of-the-client active">
+                            <div class="section-order__personal-data-of-the-client">
+                                <h2 class="section-order__hero2">Персональні дані клієнта</h2>
+                                <div class="section-order__full-info">
+                                    <form class="section-order__form" action="">
+                                        <div class="section-order__full-name">
+                                            <label class="section-order__label" for="Name_of_the_client">ПІБ клієнта 1</label>
+                                            <input class="section-order__input" type="text" name="name" placeholder="Піліпенко Віктор Дмитрович">
+                                        </div>
+                                        <div class="section-order__date">
+                                            <label class="section-order__label" for="date_of_birth">Дата народження</label>
+                                            <input class="section-order__input section-order__birth" type="text" name="birth"placeholder="31.12.2000">
+                                        </div>
+                                        <div class="section-order__tel">
+                                            <label class="section-order__label" for="phone_number">Номер телефону</label>
+                                            <input class="section-order__input section-order__phone_number" type="tel" name="phone" placeholder="+38">
+                                        </div>
+                                    </form>
+                                </div>
+            
+                                <div class="section-order__analyzes">
+            
+                                    <form class="section-order__form-analyz" autocomplete="off" action="">
+                                        <div class="section-order__block-analyzes">
+                                            <div class="section-order__text">
+                                                <div class="section-order__elem1">Перелік аналізів</div>
+                                                <div class="section-order__elem2">Вартість, грн</div>
+                                                <div class="section-order__elem3">Знижка</div>
+                                            </div>
+        
+                                            <div class="section-order__analyz">
+                                                <div class="section-order__analises">
+                                                    <span class="section-order__numder-analyz">1</span>
+                                                    <label for="searchInput"></label>
+                                                    <input class="section-order__input1" type="text" name="" id="searchInput" autocomplete="off" aria-label="назва аналіза">
+                                                    <button class="section-order__button--remove" type="button">
+                                                        <img class="section-order__img--remove" src="assets/img/Remove.png" alt="Remove">
+                                                    </button>
+                                                </div>
+                                                <button class="section-order__btn-cost" type="button" aria-label="Вартість"></button>
+                                                <div class="section-order__discount">
+                                                    <label for="priceOutput"></label>
+                                                    <input class="section-order__input3" type="text" name="" id="priceOutput" aria-label="Ціна">
+                                                    <div class="section-order__block">
+                                                        <button class="section-order__btn" type="button">грн</button>
+                                                        <img src="assets/img/Icons.svg" alt="Icons">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="section-order__analyz">
+                                                <div class="section-order__analises">
+                                                    <span class="section-order__numder-analyz">2</span>
+                                                    <label for="searchInput"></label>
+                                                    <input class="section-order__input1" type="text" name="" id="searchInput" autocomplete="off" aria-label="Назва аналізу">
+                                                    <button class="section-order__button--remove" type="button">
+                                                        <img class="section-order__img--remove" src="assets/img/Remove.png" alt="Remove">
+                                                    </button>
+                                                </div>
+                                                <button class="section-order__btn-cost" type="button" aria-label="Вартість"></button>
+                                                <div class="section-order__discount">
+                                                    <label for="priceOutput"></label>
+                                                    <input class="section-order__input3" type="text" name="" id="priceOutput" aria-label="Ціна">
+                                                    <div class="section-order__block">
+                                                        <button class="section-order__btn" type="button">грн</button>
+                                                        <img src="assets/img/Icons.svg" alt="Icons">
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="section-order__analyz">
+                                                <div class="section-order__analises">
+                                                    <span class="section-order__numder-analyz">3</span>
+                                                    <label for="searchInput"></label>
+                                                    <input class="section-order__input1" type="text" name="" id="searchInput" autocomplete="off" aria-label="Назва аналізу">
+                                                    <button class="section-order__button--remove" type="button">
+                                                        <img class="section-order__img--remove" src="assets/img/Remove.png" alt="Remove">
+                                                    </button>
+                                                </div>
+                                                <button class="section-order__btn-cost" type="button" aria-label="Вартість"></button>
+                                                <div class="section-order__discount">
+                                                    <label for="priceOutput"></label>
+                                                    <input class="section-order__input3" type="text" name="" id="priceOutput" aria-label="Ціна">
+                                                    <div class="section-order__block">
+                                                        <button class="section-order__btn" type="button">грн</button>
+                                                        <img src="assets/img/Icons.svg" alt="Icons">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <button class="section-order__add-analyz" type="button">ДОДАТИ АНАЛІЗ</button>
+                                    </form>
+                                    
+                                    <div class="section-order__type-of-biomaterial">Вид біоматеріалу
+                                        <form class="section-order__form-checkbox" action="">
+                                            <div class="checkbox-wrapper">
+                                                <input type="checkbox" name="blood" id="blood-1" class="custom-checkbox section-order__custom-checkbox">
+                                                <label for="blood-1" class="custom-checkbox-label"></label>
+                                                <label for="blood-1" class="custom-checkbox-label-2">Кров</label>
+                                            </div>
+                                            <div class="checkbox-wrapper">
+                                                <input type="checkbox" name="smear" id="smear-1" class="custom-checkbox section-order__custom-checkbox">
+                                                <label for="smear-1" class="custom-checkbox-label"></label>
+                                                <label for="smear-1" class="custom-checkbox-label-2">Мазок</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Клієнт 2 -->
+                        
+                        <div class="carousel__item section-order__personal-data-of-the-client">
+                            <div class="section-order__personal-data-of-the-client">
+                                <h2 class="section-order__hero2">Персональні дані клієнта</h2>
+                                <div class="section-order__full-info">
+                                    <form class="section-order__form" action="">
+                                        <div class="section-order__full-name">
+                                            <label class="section-order__label" for="Name_of_the_client">ПІБ клієнта 1</label>
+                                            <input class="section-order__input" type="text" name="name" placeholder="Піліпенко Віктор Дмитрович">
+                                        </div>
+                                        <div class="section-order__date">
+                                            <label class="section-order__label" for="date_of_birth">Дата народження</label>
+                                            <input class="section-order__input section-order__birth" type="text" name="birth"placeholder="31.12.2000">
+                                        </div>
+                                        <div class="section-order__tel">
+                                            <label class="section-order__label" for="phone_number">Номер телефону</label>
+                                            <input class="section-order__input section-order__phone_number" type="tel" name="phone" placeholder="+38">
+                                        </div>
+                                    </form>
+                                </div>
+            
+                                <div class="section-order__analyzes">
+            
+                                    <form class="section-order__form-analyz" action="">
+                                        <div class="section-order__block-analyzes">
+                                            <div class="section-order__text">
+                                                <div class="section-order__elem1">Перелік аналізів</div>
+                                                <div class="section-order__elem2">Вартість, грн</div>
+                                                <div class="section-order__elem3">Знижка</div>
+                                            </div>
+        
+                                            <div class="section-order__analyz">
+                                                <div class="section-order__analises">
+                                                    <span class="section-order__numder-analyz">1</span>
+                                                    <label for="searchInput"></label>
+                                                    <input class="section-order__input1" type="text" name="" id="searchInput" autocomplete="off" aria-label="Назва аналізу">
+                                                    <button class="section-order__button--remove" type="button">
+                                                        <img class="section-order__img--remove" src="assets/img/Remove.png" alt="Remove">
+                                                    </button>
+                                                </div>
+                                                <button class="section-order__btn-cost" type="button" aria-label="Вартість"></button>
+                                                <div class="section-order__discount">
+                                                    <label for="priceOutput"></label>
+                                                    <input class="section-order__input3" type="text" name="" id="priceOutput" aria-label="Ціна">
+                                                    <div class="section-order__block">
+                                                        <button class="section-order__btn" type="button">грн</button>
+                                                        <img src="assets/img/Icons.svg" alt="Icons">
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="section-order__analyz">
+                                                <div class="section-order__analises">
+                                                    <span class="section-order__numder-analyz">2</span>
+                                                    <label for="searchInput"></label>
+                                                    <input class="section-order__input1" type="text" name="" id="searchInput" autocomplete="off" aria-label="Назва аналізу">
+                                                    <button class="section-order__button--remove" type="button">
+                                                        <img class="section-order__img--remove" src="assets/img/Remove.png" alt="Remove">
+                                                    </button>
+                                                </div>
+                                                <button class="section-order__btn-cost" type="button" aria-label="Вартість"></button>
+                                                <div class="section-order__discount">
+                                                    <label for="priceOutput"></label>
+                                                    <input class="section-order__input3" type="text" name="" id="priceOutput" aria-label="Ціна">
+                                                    <div class="section-order__block">
+                                                        <button class="section-order__btn" type="button">грн</button>
+                                                        <img src="assets/img/Icons.svg" alt="Icons">
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="section-order__analyz">
+                                                <div class="section-order__analises">
+                                                    <span class="section-order__numder-analyz">3</span>
+                                                    <label for="searchInput"></label>
+                                                    <input class="section-order__input1" type="text" name="" id="searchInput" autocomplete="off" aria-label="Назва аналізу">
+                                                    <button class="section-order__button--remove" type="button">
+                                                        <img class="section-order__img--remove" src="assets/img/Remove.png" alt="Remove">
+                                                    </button>
+                                                </div>
+                                                <button class="section-order__btn-cost" type="button" aria-label="Вартість"></button>
+                                                <div class="section-order__discount">
+                                                    <label for="priceOutput"></label>
+                                                    <input class="section-order__input3" type="text" name="" id="priceOutput" aria-label="Ціна">
+                                                    <div class="section-order__block">
+                                                        <button class="section-order__btn" type="button">грн</button>
+                                                        <img src="assets/img/Icons.svg" alt="Icons">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="section-order__add-analyz" type="button">ДОДАТИ АНАЛІЗ</button>
+                                    </form>
+
+                                    <div class="section-order__type-of-biomaterial">Вид біоматеріалу
+                                        <form class="section-order__form-checkbox" action="">
+                                            <div class="checkbox-wrapper">
+                                                <input type="checkbox" name="blood" id="blood-2" class="custom-checkbox section-order__custom-checkbox">
+                                                <label for="blood-2" class="custom-checkbox-label"></label>
+                                                <label for="blood-2" class="custom-checkbox-label-2">Кров</label>
+                                            </div>
+                                            <div class="checkbox-wrapper">
+                                                <input type="checkbox" name="smear" id="smear-2" class="custom-checkbox section-order__custom-checkbox">
+                                                <label for="smear-2" class="custom-checkbox-label"></label>
+                                                <label for="smear-2" class="custom-checkbox-label-2">Мазок</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--  -->
+                    <!-- <div class="section-order__type-of-biomaterial">Вид біоматеріалу
+                        <form class="section-order__form-checkbox" action="">
+                            <label for="blood">Кров</label>
+                            <input type="checkbox" name="blood" id="blood" class="section-order__custom-checkbox">
+                            <label for="smear">Мазок</label>
+                            <input type="checkbox" name="smear" id="smear" class="section-order__custom-checkbox">
+                        </form>
+                    </div> -->
+                    <div class="section-order__info-block">
+                        <div class="section-order__info-box">
+                            <p class="section-order__text-name">Вартість за аналізи
+                                <br>
+                                <span class="section-order__cost-for-analyses">0 грн</span>
+                            </p> 
+                        </div>
+                        <div class="section-order__info-box">
+                            <p class="section-order__text-name">Вартість за виклик 
+                                <br>
+                                <span class="section-order__cost-per-call">0 грн</span>
+                            </p>
+                        </div>
+                        <div class="section-order__info-box">
+                            <p class="section-order__text-name">Вартість за біоматеріал
+                                <br>
+                                <span class="section-order__price-for-biomaterial">0 грн</span> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-info container">
+                <div class="section-info__info-box">
+                    <h3 class="section-info__hero3">Загальна вартість виклику
+                        <span class="section-info__currency">0</span> грн
+                    </h3>
+                    <button class="section-info__download" type="submit">Завантажити
+                        <img class="section-info__download-img" src="assets/img/download.svg" alt="download">
+                    </button>
+                </div>
+                
+            </section>
+
+            
+
+        </main>
+        
+        <footer id="footer">
+            <div class="footer container">
+                <div class="footer__info">
+                    <p>Copyright © 2024 | All rights reserved</p>
+                </div>
+
+
+                <!-- <div class="test">
+                    <input type="file" id="upload" accept=".xlsx, .xls" />
+                    <button id="downloadBtn" onclick="downloadData()" disabled>Завантажити аналізи</button>
+                </div> -->
+
+                <div id="modal" class="modal none">
+                    <div class="modal-content">
+                        <button id="close-modal" class="modal-close">&times;</button>
+                        <h2>Інформація про виклик</h2>
+                        <div id="modal-data" class="modal-data">
+                        <!-- Дані будуть заповнюватись динамічно -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="footer__web-contacts">
+                    <ul class="footer__list">
+                        <li class="footer__design">Designed by
+                            <a href="#">Julia Tarna</a>
+                        </li>
+                        <li class="footer__developer">This template is made by
+                            <a href="#">Alex_Corsa</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="page__background page__Ellipse--left_bottom">
+                <img src="assets/img/Ellipse_left_bottom.png" alt="left_bottom">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

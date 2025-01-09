@@ -1,0 +1,17 @@
+.footer {
+    padding: 0 24px;
+    background-color: #E8F2FD;
+    display: flex;
+    justify-content: space-between;
+    &__info {
+        align-content: center;
+    }
+    &__web-contacts {
+        padding: 40px 0;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

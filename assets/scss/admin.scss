@@ -1,0 +1,51 @@
+.admin {
+    &__block-once {
+        margin-top: 60px;
+    }
+    &__second-title {
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 29.48px;
+    }
+    &__name-analysis {
+        flex: 1 0 auto;
+        height: 48px;
+        border: 1px solid;
+        border-radius: 12px;
+    }
+    &__box-1 {
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    &__box-2 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    &__btn {
+        height: 48px;
+        width: 100px;
+    }
+    &__give-price {
+        width: 25%;
+        height: 48px;
+        border: 1px solid;
+        border-radius: 12px;
+    }
+    &__block-all {
+        margin-top: 60px;
+    }
+    &__download {
+        height: 48px;
+        width: 200px;
+    }
+}
+
+.admin__block-once label {
+    width: 130px;
+}
