@@ -390,7 +390,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <label for="searchInput"></label>
                         <input class="section-order__input1" type="text" name="" id="searchInput" autocomplete="off" aria-label="Назва аналізу">
                         <button class="section-order__button--remove" type="button">
-                            <img class="section-order__img--remove" src="/assets/img/Remove.png" alt="Remove">
+                            <img class="section-order__img--remove" src="assets/img/Remove.png" alt="Remove">
                         </button>
                     </div>
                     <button class="section-order__btn-cost" type="button" aria-label="Вартість"></button>
@@ -399,7 +399,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <input class="section-order__input3" type="text" name="" id="priceOutput" placeholder="" aria-label="Ціна">
                         <div class="section-order__block">
                             <button class="section-order__btn" type="button">грн</button>
-                            <img src="./assets/img/Icons.svg" alt="Icons">
+                            <img src="assets/img/Icons.svg" alt="Icons">
                         </div>
                     </div>
                 </div>`;
