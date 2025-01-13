@@ -74,7 +74,7 @@ input {
 }
 
 input:hover {
-  background-color: #E8F2FD;
+  background-color: #FAFDFF;
 }
 
 .page__background {
@@ -576,8 +576,7 @@ input:hover {
   display: flex;
   align-items: center;
   cursor: pointer;
-  -webkit-user-select: none; /* Префікс для Safari */
-  user-select: none; /* Основний стиль */
+  user-select: none;
 }
 
 .custom-checkbox {
@@ -638,12 +637,9 @@ input:hover {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  -webkit-backdrop-filter: blur(5px); /* Префікс для Safari */
-  backdrop-filter: blur(5px); /* Основний стиль */
+  backdrop-filter: blur(5px);
   overflow: hidden;
 }
-
-
 
 .modal h2 {
   font-size: 26px;

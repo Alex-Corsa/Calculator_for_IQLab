@@ -428,7 +428,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <label for="searchInput"></label>
                     <input class="section-order__input1" type="text" name="" id="searchInput" autocomplete="off" aria-label="Назва аналізу">
                     <button class="section-order__button--remove" type="button">
-                        <img class="section-order__img--remove" src="/assets/img/Remove.png" alt="Remove">
+                        <img class="section-order__img--remove" src="assets/img/Remove.png" alt="Remove">
                     </button>
                 </div>
                 <button class="section-order__btn-cost" type="button" aria-label="Вартість"></button>
@@ -437,7 +437,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <input class="section-order__input3" type="text" name="" id="priceOutput" placeholder="" aria-label="Ціна">
                     <div class="section-order__block">
                         <button class="section-order__btn" type="button">грн</button>
-                        <img src="./assets/img/Icons.svg" alt="Icons">
+                        <img src="assets/img/Icons.svg" alt="Icons">
                     </div>
                 </div>
             `;
@@ -874,10 +874,12 @@ parentElement.addEventListener('input', (event) => {
         const rawValue = phoneInput.value.replace(/\D/g, ''); // Видаляємо все, окрім цифр
 
         if (rawValue.length > 10) {
-            phoneInput.style.backgroundColor = 'red';
+            phoneInput.style.backgroundColor = '#FEF8F8';
+            phoneInput.style.border = '2px solid red';
             phoneInput.title = "Номер телефону має містити 10 цифр";
         } else {
             phoneInput.style.backgroundColor = '';
+            phoneInput.style.border = '';
             phoneInput.title = '';
         }
 
@@ -930,10 +932,12 @@ parentElement.addEventListener('input', (event) => {
 
             // Відображення результату перевірки
             if (!isValid) {
-                birthInput.style.backgroundColor = 'red';
+                birthInput.style.backgroundColor = '#FEF8F8';
+                birthInput.style.border = '2px solid red';
                 birthInput.title = "Неправильний формат дати";
             } else {
                 birthInput.style.backgroundColor = '';
+                birthInput.style.border = '';
                 birthInput.title = '';
             }
         } else {
@@ -953,10 +957,12 @@ const houseInput = document.getElementById('house');
 const validateEmptyInput = (input) => {
     input.addEventListener('blur', () => { // Подія при втраті фокуса
         if (input.value.trim() === '') {
-            input.style.backgroundColor = 'red';
+            input.style.backgroundColor = '#FEF8F8';
+            input.style.border = '2px solid red';
             input.title = "Поле не може бути порожнім";
         } else {
             input.style.backgroundColor = '';
+            input.style.border = '';
             input.title = '';
         }
     });
