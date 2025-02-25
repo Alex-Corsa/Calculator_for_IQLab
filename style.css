@@ -549,10 +549,10 @@ input:hover {
 }
 
 .autocomplete-list {
-  width: 659px;
+  width: 652px;
   position: absolute;
   top: 48px;
-  left: 11px;
+  left: 19px;
   border: 1px solid #ddd;
   background-color: #fff;
   max-height: 150px;

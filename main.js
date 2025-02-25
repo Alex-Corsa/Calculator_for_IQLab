@@ -260,6 +260,28 @@ cityItems.forEach((cityItem) => {
         });
     });
 
+        function updatePadding() {
+        const elements = document.querySelectorAll('.section-order__numder-analyz');
+        
+        elements.forEach((el, index) => {
+            if (index < 9) {
+                el.style.paddingLeft = '7.5px';
+            } else {
+                el.style.paddingLeft = ''; // Скидаємо стиль для решти
+            }
+        });
+    }
+    
+    // Викликаємо після додавання нового аналізу
+    document.addEventListener('click', function (event) {
+        if (event.target.classList.contains('section-order__add-analyz')) {
+            setTimeout(updatePadding, 50); // Додаємо затримку, щоб елемент встиг додатися
+        }
+    });
+    
+    // Викликаємо при завантаженні сторінки
+    document.addEventListener('DOMContentLoaded', updatePadding);
+
 
 // * Додати картку клієнта
 
@@ -753,7 +775,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const checkboxes = document.querySelectorAll('.section-order__custom-checkbox');
         checkboxes.forEach((checkbox) => {
             if (checkbox.checked) {
-                total += 60; // Для кожного вибраного чекбоксу додаємо 60 грн
+                total += 70; // Для кожного вибраного чекбоксу додаємо 60 грн
             }
         });
 
