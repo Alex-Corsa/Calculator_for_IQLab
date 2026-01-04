@@ -775,7 +775,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const checkboxes = document.querySelectorAll('.section-order__custom-checkbox');
         checkboxes.forEach((checkbox) => {
             if (checkbox.checked) {
-                total += 70; // Для кожного вибраного чекбоксу додаємо 60 грн
+                total += 80; // Для кожного вибраного чекбоксу додаємо 60 грн
             }
         });
 
